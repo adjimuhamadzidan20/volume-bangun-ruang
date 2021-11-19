@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Menghitung Volume Bangun Ruang</title>
+	<link rel="stylesheet" href="fontawesome/css/all.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background: url(background.jpg);
+			background-size: cover;
+		}
+
+		.heading {
+			text-align: center;
+			margin-top: 80px;
+			margin-bottom: 50px;
+			color: white;
+			font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
+			font-size: 21px;
+			/*background-color: lightgrey;*/
+		}
+
+		.input {
+			text-align: center;
+			/*background-color: lightgrey;*/
+		}
+		
+		.input input {
+			width: 200px;
+			padding: 8px;
+			font-family: "Comic Sans MS", cursive;
+			outline-color: grey;
+			border-radius: 30px;
+			border: none;
+		}
+
+		.button {
+			text-align: center;
+		}
+
+		.button button {
+			width: 80px;
+			height: 25px;
+			border: none;
+			margin: 0 5px;
+			border-radius: 30px;
+			font-family: "Comic Sans MS", cursive;
+		}
+
+		.button button:hover {
+			background-color: lightgrey;
+			cursor: pointer;
+		}
+
+		#hasil {
+			width: 200px;
+			height: 60px;
+			background-color: white;
+			margin: auto;
+			margin-top: 25px;
+			font-family: "Comic Sans MS", cursive;
+			font-size: 12px;
+			border-radius: 12px;
+			padding: 10px;
+			display: none;
+		}
+
+		.kembali {
+			position: absolute;
+			bottom: 0;
+			padding: 20px 35px;
+		}
+
+		.kembali button {
+			font-family: "Comic Sans MS", cursive;
+			font-size: 12px;
+			width: 80px;
+			padding: 5px 0;
+			border: none;
+			border-radius: 30px;
+		}
+
+		.kembali button:hover {
+			background-color: lightgrey;
+			cursor: pointer;
+		}
+
+		.fa-arrow-left {
+			margin-right: 3px;
+		}
+
+		/*responsive*/
+		@media screen and (max-width: 1024px) {
+			.heading {
+				font-size: 18px;
+			}
+
+			.input input {
+				width: 180px;
+				padding: 5px;
+				font-size: 12px;
+			}
+
+			.button button {
+				width: 78px;
+				height: 22px;
+				font-size: 12px
+			}
+
+			.kembali button {
+				font-size: 11px;
+				width: 78px;
+				padding: 4px 0;
+			}
+		}
+
+		@media screen and (max-width: 425px) {
+			.heading {
+				font-size: 15px;
+			}
+
+			.input input {
+				width: 170px;
+				font-size: 12px;
+			}
+
+			.button button {
+				width: 73px;
+				height: 20px;
+				font-size: 11px
+			}
+
+			.kembali {
+				/*background-color: lightgrey;*/
+				width: 100%;
+				text-align: center;
+
+			}
+
+			.kembali button {
+				font-size: 10px;
+				width: 70px;
+				padding: 4px 0;
+			}
+
+		}	
+
+		@media screen and (max-width: 320px) {
+			.input input {
+				width: 165px;
+				font-size: 11px;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="heading">
+		<h1>Menghitung Volume Balok</h1>
+	</div>
+	<div class="input">
+		<input type="text" placeholder="Masukan panjang" id="panjang">
+		<br><br>
+		<input type="text" placeholder="Masukan lebar" id="lebar">
+		<br><br>
+		<input type="text" placeholder="Masukan tinggi" id="tinggi">
+		<br><br>
+	</div>
+	<div class="button">
+		<button type="button" onclick="balok()">Hitung</button>
+		<a href="balok.html"><button>Reset</button></a>
+	</div>
+	<div id="hasil"></div>
+	
+	<div class="kembali">
+		<a href="index.html">
+			<button><i class="fas fa-arrow-left"></i>Kembali</button>
+		</a>
+	</div>
+
+	<script>
+		function balok() {
+			let panjang = parseInt(document.getElementById('panjang').value);
+			let lebar = parseInt(document.getElementById('lebar').value);
+			let tinggi = parseInt(document.getElementById('tinggi').value);
+
+			// v = p x l x t
+			let volume = panjang * lebar * tinggi;
+			let hasil = volume;
+
+			alert('Volume pada balok adalah '+ hasil +' cm3');
+			document.getElementById('hasil').innerHTML = hasil +' cm3';
+			document.getElementById('hasil').style.display = 'block';
+
+		}
+	</script>
+</body>
+</html>

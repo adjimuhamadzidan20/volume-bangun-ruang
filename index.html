@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Menghitung Volume Bangun Ruang</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background: url(background.jpg);
+			background-size: cover;
+		}
+
+		.heading {
+			text-align: center;
+			margin-top: 80px;
+			margin-bottom: 60px;
+			color: white;
+			font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
+			font-size: 21px;
+			/*background-color: lightgrey;*/
+		}
+
+		hr {
+			background-color: white;
+			width: 120px;
+			height: 2.5px;
+			border: none;
+			margin: auto;
+			margin-top: 18px;
+		}
+
+		.list-button {
+			/*background-color: lightgrey;*/
+			margin-top: 20px;
+			margin: auto;
+			width: 250px;
+		}
+
+		.list-button button {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			margin: 25px auto;
+			border: none;
+			font-family: "Comic Sans MS", cursive;
+			border-radius: 30px;
+		}
+
+		.list-button button:hover {
+			background-color: lightgrey;
+			cursor: pointer;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		/*reponsive*/
+		@media screen and (max-width: 1024px) {
+			.heading {
+				font-size: 18px;
+			}
+
+			hr {
+				width: 100px;
+			}
+
+			.list-button button {
+				font-size: 12px;
+			}
+		}
+
+		@media screen and (max-width: 425px) {
+			.heading {
+				font-size: 15px;
+			}
+
+			hr {
+				width: 80px;
+			}
+
+			.list-button button {
+				width: 90%;
+				font-size: 11px
+			}
+		}
+
+		@media screen and (max-width: 320px) {
+			.heading {
+				font-size: 13px;
+			}
+
+			hr {
+				width: 65px;
+			}
+
+			.list-button button {
+				width: 80%
+			}
+		}
+		
+
+
+
+	</style>
+</head>
+<body>
+	<div class="heading">
+		<h1>Menghitung<br>Volume Bangun Ruang</h1>
+		<hr>
+	</div>
+	<div class="list-button">
+		<a href="balok.html"><button>Menghitung Volume Balok</button></a>
+		<a href="tabung.html"><button>Menghitung Volume Tabung</button></a>
+		<a href="bola.html"><button>Menghitung Volume Bola</button></a>
+		<a href="prismaSegitiga.html"><button>Menghitung Volume Prisma Segitiga</button></a>
+		<a href="kerucut.html"><button>Menghitung Volume Kerucut</button></a>
+	</div>
+	<br><br><br>
+</body>
+</html>
